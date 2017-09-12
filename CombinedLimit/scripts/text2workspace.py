@@ -32,6 +32,7 @@ if options.fileName.endswith(".gz"):
 else:
     file = open(options.fileName, "r")
 
+#print('Parse text file')
 ## Parse text file 
 DC = parseCard(file, options)
 
@@ -50,7 +51,10 @@ physics = getattr(mod, physModName)
 if mod     == None: raise RuntimeError, "Physics model module %s not found" % physModMod
 if physics == None or not isinstance(physics, PhysicsModel): 
     raise RuntimeError, "Physics model %s in module %s not found, or not inheriting from PhysicsModel" % (physModName, physModMod)
+#print 'Setting Physics Options'
 physics.setPhysicsOptions(options.physOpt)
 ## Attach to the tools, and run
+#print 'MB.setPhysics'
 MB.setPhysics(physics)
+#print 'MB.doModel'
 MB.doModel()

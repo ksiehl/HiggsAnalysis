@@ -34,6 +34,8 @@ class ShapeBuilder(ModelBuilder):
         else:
             self.out.obs = self.out.binVars
         self.doSet("observables",self.out.obs)
+	#print 'Doing Observables'
+	#self.out.obs.writeToFile("selfOutObs")
         if len(self.DC.obs) != 0: 
             self.doCombinedDataset()
     def doIndividualModels(self):
