@@ -159,6 +159,9 @@
 #pragma link C++ class RooAlpha4AtanPowPdf+;
 #pragma link C++ class RooDoubleCrystalBall+;RooAtanAlpha
 
+#pragma link C++ class RooPoly3Pdf+;
+#pragma link C++ class RooChiSqPdf+;
+
 #pragma link C++ class RooStats::HistFactory::RooBSplineBases+;
 #pragma link C++ class RooStats::HistFactory::RooBSpline+;
 #pragma link C++ class RooParamKeysPdf+;
